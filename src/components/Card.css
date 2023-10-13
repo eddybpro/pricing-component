@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+
+:root {
+  --color-brand-1: hsl(232, 13%, 33%);
+  --color-brand-2: hsl(233, 13%, 49%);
+
+  --color-site-1: hsl(234, 14%, 74%);
+  --color-site-2: hsl(240, 78%, 98%);
+  --color-site-3-1: hsl(236, 72%, 79%);
+  --color-site-3-2: hsl(237, 63%, 64%);
+
+  --font-montserrat: "Montserrat", sans-serif;
+}
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--font-montserrat);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+ul {
+  list-style: none;
+}
+
+.CardWrapper {
+  width: 100%;
+  background-color: var(--color-site-2);
+  padding: 3rem 2rem;
+  border-radius: 1rem;
+  text-align: center;
+}
+
+.CardWrapper:nth-of-type(2) {
+  background: linear-gradient(var(--color-site-3-1), var(--color-site-3-2));
+}
+
+.CardWrapper:nth-of-type(2) .CardWrapper-Title,
+.CardWrapper:nth-of-type(2) .CardWrapper-Price,
+.CardWrapper:nth-of-type(2) .CardWrapper-Features > li {
+  color: var(--color-site-2);
+}
+
+.CardWrapper:nth-of-type(2) .CardWrapper-Btn {
+  background: var(--color-site-2);
+  border: 1px solid var(--color-site-2);
+  color: var(--color-site-3-2);
+  transition: all 0.2s ease-in-out;
+}
+
+.CardWrapper:nth-of-type(2) .CardWrapper-Btn:hover {
+  background: transparent;
+  color: var(--color-site-2);
+}
+
+.CardWrapper-Title {
+  font-size: 2.5rem;
+  color: var(--color-brand-2);
+  text-transform: capitalize;
+  margin-bottom: 1.5rem;
+}
+
+.CardWrapper-Price {
+  display: block;
+  font-size: 3.5rem;
+  color: var(--color-brand-1);
+  margin-bottom: 2rem;
+}
+
+.CardWrapper-Features > li:first-of-type {
+  border-top: 1px solid var(--color-site-1);
+}
+
+.CardWrapper-Features > li {
+  font-size: 1.6rem;
+  padding: 1rem 0;
+  text-transform: capitalize;
+  color: var(--color-brand-2);
+  border-bottom: 1px solid var(--color-site-1);
+}
+
+.CardWrapper-Btn {
+  display: block;
+  margin: 2rem auto 1rem;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  width: 80%;
+  border: 1px solid var(--color-site-3-2);
+  outline: none;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  background: linear-gradient(
+    120deg,
+    var(--color-site-3-1),
+    var(--color-site-3-2)
+  );
+  color: var(--color-site-2);
+  transition: all 0.2s ease-in-out;
+}
+
+.CardWrapper-Btn:hover {
+  background: var(--color-site-2);
+  color: var(--color-site-3-2);
+}
+
+@media screen and (min-width: 768px) {
+  .CardWrapper:nth-of-type(2) {
+    padding: 5rem 2rem;
+  }
+
+  .CardWrapper:nth-of-type(1) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  .CardWrapper:nth-of-type(3) {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}

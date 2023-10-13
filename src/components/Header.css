@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+
+:root {
+  --color-brand-1: hsl(232, 13%, 33%);
+  --color-brand-2: hsl(233, 13%, 49%);
+
+  --color-site-1: hsl(234, 14%, 74%);
+  --color-site-2: hsl(240, 78%, 98%);
+  --color-site-3-1: hsl(236, 72%, 79%);
+  --color-site-3-2: hsl(237, 63%, 64%);
+
+  --font-montserrat: "Montserrat", sans-serif;
+}
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--font-montserrat);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+header {
+  width: 100%;
+  text-align: center;
+}
+
+.Title {
+  font-size: 3.5rem;
+  text-transform: capitalize;
+  color: var(--color-brand-1);
+  margin-bottom: 2rem;
+}
+
+label {
+  display: block;
+  width: 100%;
+  margin-bottom: 2rem;
+  font-size: 1.6rem;
+  text-transform: capitalize;
+  color: var(--color-brand-2);
+}
+
+.check {
+  appearance: none;
+  display: inline-block;
+  width: 4rem;
+  height: 2rem;
+  border-radius: 1rem;
+  background-color: var(--color-site-3-2);
+  margin: 0 1.5rem -0.5rem;
+  position: relative;
+  cursor: pointer;
+}
+
+.check::before {
+  content: "";
+  position: absolute;
+  left: 0.25rem;
+  top: 50%;
+  transform: translateY(-50%);
+  display: block;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background-color: var(--color-site-2);
+}
+
+.check:checked::before {
+  right: 0.25rem;
+  left: auto;
+}
